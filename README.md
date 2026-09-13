@@ -85,26 +85,11 @@ npm run dev
 For Software:
 
 #### Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Hero landing page & interactive overthinking chat input interface*
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/08a665e6-ab6e-4afa-a822-8f015bcdf8ba" />
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/6c9ca578-298f-40b6-9f42-605af33253a4" />
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/acd79dc1-1d5b-468a-91ba-fdc6b463f9c7" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Evidence breakdown showing severity, overthinking scores, and red flags*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Full Spiral Report with absurd theories and savage comeback suggestions*
-
-#### Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*System Architecture: User Input (Text / Screenshot) ➔ Nuxt 4 Frontend ➔ Serverless Nitro API (`/api/analyze`) ➔ Google Gemini Flash Multimodal API (with dynamic heuristic fallback engine) ➔ Structured Overthinking Dossier JSON ➔ Interactive UI Report*
-
-For Hardware:
-
-#### Schematic & Circuit
-*N/A - Pure Software Project*
-
-#### Build Photos
-*N/A - Pure Software Project*
 
 #### Flow Diagram
 
