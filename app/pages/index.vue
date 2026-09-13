@@ -1,16 +1,17 @@
 <template>
   <div class="flex flex-col min-h-screen selection:bg-[#6B1E32]/50 selection:text-[#E8C7B8] bg-[#0A0809] relative overflow-hidden">
     
-    <!-- Thinking Monkey Background Layer with Luxury Vignette -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden flex items-center justify-center">
+    <!-- Full Screen Thinking Monkey Background -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       <img 
         :src="monkeyImg" 
         alt="Overthinking Monkey Meme Background" 
-        class="w-full h-full object-cover sm:object-contain object-center opacity-40 filter contrast-125 brightness-90 scale-105 transition-all duration-700"
+        class="w-full h-full object-cover object-center filter contrast-105 brightness-75 scale-100"
       />
-      <!-- Soft Luxury Vignette to keep text readable without hiding the monkey -->
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0A0809]/60 via-transparent to-[#0A0809]"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_30%,_#0A0809_95%)]"></div>
+      <!-- Luxury Dark Tint Overlay for Crisp Readability -->
+      <div class="absolute inset-0 bg-[#0A0809]/50"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0A0809]/75 via-transparent to-[#0A0809]/95"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(107,30,50,0.25)_0%,_transparent_70%,_#0A0809_100%)]"></div>
     </div>
 
     <!-- Navbar -->
@@ -279,7 +280,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
-import monkeyImg from '~/assets/images/thinking-monkey.png'
+import monkeyImg from '~/assets/images/thinking-monkey.jpg'
 
 const activeThought = ref('')
 const hoverOk = ref(false)
