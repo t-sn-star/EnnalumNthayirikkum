@@ -53,6 +53,7 @@ For Hardware:
 
 ### Implementation
 
+
 For Software:
 
 #### Installation
@@ -104,6 +105,26 @@ For Hardware:
 
 #### Build Photos
 *N/A - Pure Software Project*
+
+#### Flow Diagram
+
+```mermaid
+flowchart TD
+    A[👤 User Input: Text / Screenshot] --> B[🎨 Nuxt 4 / Vue 3]
+    B -->|POST /api/analyze| C[⚡ Nitro Server]
+    C --> D{Gemini API Configured?}
+    
+    D -->|Yes| E[🧠 Google Gemini Flash Multimodal API]
+    D -->|No / Rate Limit| F[🕵️ Heuristic Fallback]
+    
+    E --> G[📄 Structured JSON]
+    F --> G
+    
+    G --> B
+    B --> H[📊 Interactive Overthinking Report]
+    H --> I[🚩 Red Flags & Dry Text Energy Score]
+    H --> J[🔥 Savage Comeback Generator]
+```
 
 ### Project Link
 https://ennalum-nthayirikkum.vercel.app/
