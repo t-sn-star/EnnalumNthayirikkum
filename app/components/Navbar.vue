@@ -10,14 +10,9 @@
           <span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#E8C7B8] rounded-full"></span>
         </div>
 
-        <div class="flex flex-col">
-          <div class="flex items-center gap-2">
-            <span class="font-display font-black text-lg sm:text-xl tracking-tight text-[#F8F1EE] group-hover:text-[#E8C7B8] transition-colors">
-              EnnalumNthayirikkum<span class="text-[#6B1E32]">..?</span>
-            </span>
-          </div>
-          <span class="hidden sm:block text-[11px] font-sans text-[#E8C7B8]/70 font-medium">
-            The Chronic Overthinker's Laboratory
+        <div class="flex items-center gap-2">
+          <span class="font-display font-black text-lg sm:text-xl tracking-tight text-[#F8F1EE] group-hover:text-[#E8C7B8] transition-colors">
+            EnnalumNthayirikkum<span class="text-[#6B1E32]">..?</span>
           </span>
         </div>
       </NuxtLink>
