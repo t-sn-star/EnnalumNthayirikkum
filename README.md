@@ -45,7 +45,7 @@ The goal is to create more.
 For Software:
 - **Languages used**: TypeScript, JavaScript, Vue (SFC), HTML5, CSS3
 - **Frameworks used**: Nuxt 4 (Nuxt.js), Vue 3, Nitro Engine
-- **Libraries used**: Tailwind CSS, `@lucide/vue` / `lucide-vue-next` (Lucide Icons), `@supabase/supabase-js`, Google Gemini Generative AI SDK / REST API
+- **Libraries used**: Tailwind CSS, `@lucide/vue` / `lucide-vue-next` (Lucide Icons), Google Gemini Generative AI SDK / REST API
 - **Tools used**: Node.js, npm, VS Code, Git, GitHub, Vercel
 
 For Hardware:
