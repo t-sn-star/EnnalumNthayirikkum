@@ -6,17 +6,17 @@
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
           <div class="flex items-center gap-2 mb-1">
-            <span class="text-xs font-mono text-violet-400 font-bold tracking-wider uppercase">// COGNITIVE ARCHIVE</span>
+            <span class="text-xs font-mono text-violet-400 font-bold tracking-wider uppercase">// SPIRAL VAULT</span>
           </div>
-          <h1 class="font-display font-bold text-3xl sm:text-4xl text-white">Archived Case Files</h1>
-          <p class="text-xs sm:text-sm font-mono text-slate-400 mt-1">Chronological catalog of overanalyzed messages and ruined moods</p>
+          <h1 class="font-display font-bold text-3xl sm:text-4xl text-white">Past Overthinking Sessions</h1>
+          <p class="text-xs sm:text-sm font-mono text-slate-400 mt-1">Every dry text, unanswered message, and ruined mood saved in one place.</p>
         </div>
 
         <NuxtLink 
           to="/dashboard"
           class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-violet-600 text-white font-mono text-xs font-bold uppercase tracking-wider shadow-lg shadow-rose-950/40"
         >
-          + NEW INVESTIGATION
+          + OVERTHINK A NEW TEXT
         </NuxtLink>
       </div>
 
@@ -42,14 +42,14 @@
 
           <div class="flex items-center gap-4 self-end md:self-auto shrink-0">
             <div class="text-right">
-              <span class="text-[10px] font-mono text-slate-500 uppercase block">OVERTHINK SCORE</span>
+              <span class="text-[10px] font-mono text-slate-500 uppercase block">PANIC SCORE</span>
               <span class="text-sm font-mono font-bold text-rose-400">{{ item.score }}</span>
             </div>
             <NuxtLink 
               :to="`/report/${item.id}`"
               class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-mono text-slate-200 border border-white/10"
             >
-              INSPECT DOSSIER →
+              VIEW BREAKDOWN →
             </NuxtLink>
           </div>
         </div>

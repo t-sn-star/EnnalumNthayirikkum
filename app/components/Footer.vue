@@ -15,8 +15,8 @@
       <!-- Navigation Links -->
       <div class="flex flex-wrap justify-center gap-6 text-xs font-sans">
         <NuxtLink to="/dashboard" class="text-slate-400 hover:text-rose-400 transition-colors">Start Overthinking</NuxtLink>
-        <NuxtLink to="/evidence" class="text-slate-400 hover:text-rose-400 transition-colors">Screenshot Parser</NuxtLink>
-        <NuxtLink to="/history" class="text-slate-400 hover:text-rose-400 transition-colors">Incident Archive</NuxtLink>
+        <NuxtLink to="/evidence" class="text-slate-400 hover:text-rose-400 transition-colors">Upload Screenshot</NuxtLink>
+        <NuxtLink to="/history" class="text-slate-400 hover:text-rose-400 transition-colors">Saved Spirals</NuxtLink>
         <NuxtLink to="/login" class="text-slate-400 hover:text-rose-400 transition-colors">Sign In</NuxtLink>
       </div>
 

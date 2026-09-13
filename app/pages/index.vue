@@ -107,18 +107,18 @@
 
       </section>
 
-      <!-- LIVE INTERACTIVE AUTOPSY WORKBENCH -->
+      <!-- LIVE INTERACTIVE OVERTHINKING LAB -->
       <section id="preview-section" class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-16">
         
         <div class="text-center mb-8">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-xs font-mono text-violet-300 mb-3">
-            <span>INTERACTIVE LABORATORY</span>
+            <span>INTERACTIVE LAB</span>
           </div>
           <h2 class="font-display font-bold text-2xl sm:text-4xl text-white tracking-tight">
-            The Anatomy of a Catastrophic Text
+            The Anatomy of a Dry Text
           </h2>
           <p class="text-sm sm:text-base text-slate-400 font-sans mt-2 max-w-lg mx-auto">
-            Click into real text specimens and tweak the anxiety levels to watch theories branch in real-time.
+            Click into real texts and tweak the panic levels to watch the theories branch in real-time.
           </p>
         </div>
 
@@ -135,10 +135,10 @@
             // CORE TOOLKIT
           </span>
           <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mt-2">
-            Engineered For Pure Cognitive Spiral
+            Engineered For Pure Overthinking
           </h2>
           <p class="text-sm sm:text-base text-slate-400 font-sans mt-3 max-w-xl mx-auto">
-            Everything you need to turn a 3-second read into 4 hours of intense philosophical deliberation.
+            Everything you need to turn a 3-second text into 4 hours of intense spiraling.
           </p>
         </div>
 
@@ -150,13 +150,13 @@
               <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-xl font-mono text-rose-400 mb-5 group-hover:scale-110 transition-transform">
                 ⚡
               </div>
-              <h3 class="font-display font-bold text-lg text-white mb-2">Micro-Punctuation Forensics</h3>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Dry Punctuation Decoder</h3>
               <p class="text-sm text-slate-300 leading-relaxed font-sans">
-                Missing a period? That's unresolved hostility. A stray comma? Passive-aggressive maneuvering. Every single byte is scanned for veiled malice.
+                Missing a period? That's unresolved hostility. A stray comma? Passive-aggressive maneuvering. Every single letter decoded for hidden vibes.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-white/5 text-xs font-mono text-rose-400">
-              CONFIDENCE: 99.4% FICTIONAL
+              CONFIDENCE: 99.4% REAL
             </div>
           </div>
 
@@ -166,9 +166,9 @@
               <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-xl font-mono text-violet-400 mb-5 group-hover:scale-110 transition-transform">
                 🧠
               </div>
-              <h3 class="font-display font-bold text-lg text-white mb-2">Multi-Track Doom Tree</h3>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Multi-Track Spiral Tree</h3>
               <p class="text-sm text-slate-300 leading-relaxed font-sans">
-                Why settle for reality when you can generate 5 parallel catastrophic timelines? Branching theories ranging from "they hate you" to "they joined an offshore commune".
+                Why settle for reality when you can generate 5 parallel chaotic timelines? Branching theories ranging from "they hate you" to "they lost their phone in the ocean".
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-white/5 text-xs font-mono text-violet-400">
@@ -182,9 +182,9 @@
               <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xl font-mono text-emerald-400 mb-5 group-hover:scale-110 transition-transform">
                 🎯
               </div>
-              <h3 class="font-display font-bold text-lg text-white mb-2">Petty Clapback Generator</h3>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Petty Comeback Generator</h3>
               <p class="text-sm text-slate-300 leading-relaxed font-sans">
-                Armed counter-responses calibrated to match or surpass detected hostility. Generates clinical, icy, or completely unhinged replies with 1-click copy.
+                Armed counter-responses calibrated to match dry text hostility. Generates icy, unbothered, or completely unhinged replies with 1-tap copy.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-white/5 text-xs font-mono text-emerald-400">
@@ -198,13 +198,13 @@
               <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-xl font-mono text-cyan-400 mb-5 group-hover:scale-110 transition-transform">
                 📊
               </div>
-              <h3 class="font-display font-bold text-lg text-white mb-2">Hyper-Precise Fake Metrics</h3>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Hyper-Specific Panic Stats</h3>
               <p class="text-sm text-slate-300 leading-relaxed font-sans">
-                Radar charts, latency histograms, and spectral sentiment waveforms that look so convincingly scientific your therapist would nod in agreement.
+                Confidence charts, reply latency stats, and dry energy waveforms that look so scientific your best friend will screenshot it.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-white/5 text-xs font-mono text-cyan-400">
-              0.00% ACTIONABLE ADVICE
+              0.00% CHILL DETECTED
             </div>
           </div>
 
@@ -214,13 +214,13 @@
               <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-xl font-mono text-amber-400 mb-5 group-hover:scale-110 transition-transform">
                 🔍
               </div>
-              <h3 class="font-display font-bold text-lg text-white mb-2">Evidence Screenshot Parser</h3>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Screenshot Vision Reader</h3>
               <p class="text-sm text-slate-300 leading-relaxed font-sans">
-                Drop your WhatsApp, iMessage, or Instagram DM screenshots. We extract timestamps, battery levels, and typing bubble latency for full autopsy.
+                Drop your WhatsApp, iMessage, or Instagram DM screenshots. We scan timestamps, battery levels, and typing bubble energy in seconds.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-white/5 text-xs font-mono text-amber-400">
-              OCR EVIDENCE DROP
+              SCREENSHOT READY
             </div>
           </div>
 
@@ -230,13 +230,13 @@
               <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-xl font-mono text-rose-400 mb-5 group-hover:scale-110 transition-transform">
                 📁
               </div>
-              <h3 class="font-display font-bold text-lg text-white mb-2">Archived Incident Dossiers</h3>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Saved Overthinking Vault</h3>
               <p class="text-sm text-slate-300 leading-relaxed font-sans">
-                Keep a personal ledger of every interaction you have overanalyzed. Compare red flag patterns across previous suspects over time.
+                Keep a personal diary of every dry text you have ever spiraled over. Compare red flag patterns across all your situationships.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-white/5 text-xs font-mono text-rose-400">
-              SAVED TO CLOUD ARCHIVE
+              SAVED IN YOUR VAULT
             </div>
           </div>
 

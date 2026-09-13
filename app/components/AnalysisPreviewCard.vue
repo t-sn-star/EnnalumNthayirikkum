@@ -7,13 +7,13 @@
         <div class="flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
           <span class="text-xs font-mono font-bold tracking-wider text-rose-400 uppercase">
-            LIVE SPECIMEN AUTOPSY
+            THE OVERTHINKING LAB 🔬
           </span>
           <span class="px-2 py-0.5 rounded-full text-[10px] font-mono bg-rose-500/15 text-rose-300 border border-rose-500/25">
             {{ activeSpecimen.severity }}
           </span>
         </div>
-        <p class="text-xs font-sans text-slate-400 mt-1">Select a suspicious text message to run live decompilation:</p>
+        <p class="text-xs font-sans text-slate-400 mt-1">Pick a dry text to watch us spiral over it:</p>
       </div>
 
       <!-- Specimen Selector Pills -->
@@ -36,7 +36,7 @@
     <div class="mt-6 p-5 sm:p-6 rounded-2xl bg-obsidian-950/90 border border-white/5 relative group/bubble">
       <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-3">
         <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded bg-white/10 text-slate-200 text-[10px] font-semibold tracking-wider">RECEIVED EVIDENCE</span>
+          <span class="px-2 py-0.5 rounded bg-white/10 text-slate-200 text-[10px] font-semibold tracking-wider">THE TEXT 💬</span>
           <span class="text-slate-400 font-mono">{{ activeSpecimen.timestamp }}</span>
         </div>
         <span class="text-rose-400 text-xs font-semibold font-mono">{{ activeSpecimen.subtextThreat }}</span>
@@ -58,18 +58,18 @@
             </div>
             
             <div class="absolute -top-2.5 -right-2.5 bg-rose-500 text-white text-[9px] font-mono px-2 py-0.5 rounded-full font-bold shadow-md animate-bounce">
-              CLICK EVIDENCE
+              TAP TO DECODE
             </div>
           </div>
 
           <div class="text-xs font-sans text-slate-400 max-w-xs leading-relaxed hidden md:block">
-            <span class="text-rose-400 font-semibold font-mono">Forensic breakdown:</span> {{ activeSpecimen.quickSummary }}
+            <span class="text-rose-400 font-semibold font-mono">The real tea:</span> {{ activeSpecimen.quickSummary }}
           </div>
         </div>
 
         <!-- Paranoia Level Stepper -->
         <div class="flex flex-col gap-1.5 bg-obsidian-900/90 p-3 rounded-2xl border border-white/10 shrink-0">
-          <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">ESCALATION SENSITIVITY</span>
+          <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">PANIC LEVEL</span>
           <div class="flex items-center gap-1">
             <button 
               v-for="lvl in [1, 2, 3]" 
@@ -90,8 +90,8 @@
       <transition enter-active-class="transition duration-200 ease-out" enter-from-class="transform scale-95 opacity-0" enter-to-class="transform scale-100 opacity-100">
         <div v-if="showEvidenceAnnotation" class="mt-4 p-3.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-xs font-sans text-rose-200 flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <span>🔬</span>
-            <span><strong>Micro-Forensic Discovery:</strong> {{ activeSpecimen.annotation }}</span>
+            <span>☕</span>
+            <span><strong>The Real Tea:</strong> {{ activeSpecimen.annotation }}</span>
           </div>
           <button @click="showEvidenceAnnotation = false" class="text-slate-400 hover:text-white text-sm px-2">✕</button>
         </div>
@@ -99,49 +99,27 @@
     </div>
 
     <!-- Core Dynamic Metrics Grid -->
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
       
-      <div class="p-4 rounded-2xl bg-obsidian-900/90 border border-rose-500/20 relative overflow-hidden group/metric hover:border-rose-500/50 transition-colors">
-        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">OVERTHINKING INDEX</span>
+      <div class="p-5 rounded-2xl bg-obsidian-900/90 border border-cyan-500/25 relative overflow-hidden group/metric hover:border-cyan-500/50 transition-colors">
+        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block">CHANCE YOU'RE COOKED</span>
         <div class="flex items-baseline gap-2 mt-1">
-          <span class="text-2xl sm:text-4xl font-display font-black text-rose-400">{{ activeMetrics.overthinking }}</span>
-          <span class="text-[10px] font-mono text-rose-300 font-bold">SEVERE</span>
-        </div>
-        <div class="w-full bg-slate-800/80 h-1.5 rounded-full mt-3 overflow-hidden">
-          <div class="bg-gradient-to-r from-rose-500 to-rose-400 h-full rounded-full transition-all duration-500" :style="{ width: activeMetrics.overthinking }"></div>
-        </div>
-      </div>
-
-      <div class="p-4 rounded-2xl bg-obsidian-900/90 border border-cyan-500/20 relative overflow-hidden group/metric hover:border-cyan-500/50 transition-colors">
-        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">CHANCE IT'S HARMFUL</span>
-        <div class="flex items-baseline gap-2 mt-1">
-          <span class="text-2xl sm:text-4xl font-display font-black text-cyan-400">{{ activeMetrics.danger }}</span>
-          <span class="text-[10px] font-mono text-cyan-300 font-bold">CALCULATED</span>
+          <span class="text-3xl sm:text-4xl font-display font-black text-cyan-400">{{ activeMetrics.danger }}</span>
+          <span class="text-[11px] font-mono text-cyan-300 font-bold">CALCULATED</span>
         </div>
         <div class="w-full bg-slate-800/80 h-1.5 rounded-full mt-3 overflow-hidden">
           <div class="bg-cyan-400 h-full rounded-full transition-all duration-500" :style="{ width: activeMetrics.danger }"></div>
         </div>
       </div>
 
-      <div class="p-4 rounded-2xl bg-obsidian-900/90 border border-violet-500/20 relative overflow-hidden group/metric hover:border-violet-500/50 transition-colors">
-        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">SUBTEXT HOSTILITY</span>
+      <div class="p-5 rounded-2xl bg-obsidian-900/90 border border-violet-500/25 relative overflow-hidden group/metric hover:border-violet-500/50 transition-colors">
+        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block">DRY TEXT ENERGY</span>
         <div class="flex items-baseline gap-2 mt-1">
-          <span class="text-2xl sm:text-4xl font-display font-black text-violet-400">{{ activeMetrics.hostility }}</span>
-          <span class="text-[10px] font-mono text-violet-300 font-bold">ICED</span>
+          <span class="text-3xl sm:text-4xl font-display font-black text-violet-400">{{ activeMetrics.hostility }}</span>
+          <span class="text-[11px] font-mono text-violet-300 font-bold">ICED</span>
         </div>
         <div class="w-full bg-slate-800/80 h-1.5 rounded-full mt-3 overflow-hidden">
           <div class="bg-violet-400 h-full rounded-full transition-all duration-500" :style="{ width: activeMetrics.hostility }"></div>
-        </div>
-      </div>
-
-      <div class="p-4 rounded-2xl bg-obsidian-900/90 border border-amber-500/20 relative overflow-hidden group/metric hover:border-amber-500/50 transition-colors">
-        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">SPIRAL DURATION</span>
-        <div class="flex items-baseline gap-2 mt-1">
-          <span class="text-2xl sm:text-4xl font-display font-black text-amber-400">{{ activeMetrics.spiralTime }}</span>
-          <span class="text-[10px] font-mono text-amber-300 font-bold">PROJECTED</span>
-        </div>
-        <div class="w-full bg-slate-800/80 h-1.5 rounded-full mt-3 overflow-hidden">
-          <div class="bg-amber-400 h-full rounded-full transition-all duration-500" :style="{ width: activeMetrics.spiralPercent }"></div>
         </div>
       </div>
 
@@ -155,9 +133,9 @@
         <div>
           <div class="flex items-center justify-between mb-4">
             <h4 class="text-xs font-mono font-bold tracking-wider text-slate-200 uppercase flex items-center gap-2">
-              <span class="text-rose-400">🚩</span> DETECTED MICRO-RED FLAGS ({{ activeSpecimen.flags.length }})
+              <span class="text-rose-400">🚩</span> SPOTTED RED FLAGS ({{ activeSpecimen.flags.length }})
             </h4>
-            <span class="text-[10px] font-mono text-slate-400">CONFIDENCE: 99.7%</span>
+            <span class="text-[10px] font-mono text-slate-400">100% FACTUAL</span>
           </div>
 
           <div class="space-y-2.5">
@@ -184,7 +162,7 @@
         <div>
           <div class="flex items-center justify-between mb-4">
             <h4 class="text-xs font-mono font-bold tracking-wider text-slate-200 uppercase flex items-center gap-2">
-              <span class="text-violet-400">⚡</span> BRANCHING PARANOIA THEORIES
+              <span class="text-violet-400">⚡</span> UNHINGED THEORIES
             </h4>
             
             <!-- Theory Selector Tabs -->
@@ -218,8 +196,8 @@
         <!-- Recommended Savage Counter-Responses -->
         <div class="mt-4 pt-4 border-t border-white/10">
           <div class="flex items-center justify-between mb-2.5">
-            <span class="text-[11px] font-mono font-semibold text-slate-400 uppercase">RECOMMENDED PETTY RESPONSES:</span>
-            <span class="text-[10px] font-mono text-rose-400">1-CLICK CLIPBOARD</span>
+            <span class="text-[11px] font-mono font-semibold text-slate-400 uppercase">PETTY COMEBACKS 🔥</span>
+            <span class="text-[10px] font-mono text-rose-400">TAP TO COPY</span>
           </div>
 
           <div class="space-y-2">
@@ -227,10 +205,10 @@
               v-for="(reply, rIdx) in activeSpecimen.savageReplies" 
               :key="rIdx"
               @click="copyReply(reply, rIdx)"
-              class="w-full text-left p-2.5 sm:p-3 rounded-xl bg-white/5 hover:bg-rose-500/15 border border-white/10 hover:border-rose-500/40 text-xs font-mono text-slate-200 flex items-center justify-between transition-all group/btn active:scale-98"
+              class="w-full text-left p-3 rounded-xl bg-white/5 hover:bg-rose-500/15 border border-white/10 hover:border-rose-500/40 text-xs font-mono text-slate-200 flex items-center justify-between gap-3 transition-all group/btn active:scale-98"
             >
-              <span class="truncate pr-2 text-slate-200 font-medium">"{{ reply }}"</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 group-hover/btn:bg-rose-500 group-hover/btn:text-white text-slate-400 transition-colors shrink-0">
+              <span class="flex-grow text-slate-200 font-medium break-words leading-relaxed">"{{ reply }}"</span>
+              <span class="text-[10px] font-mono px-2.5 py-1 rounded-lg bg-white/5 group-hover/btn:bg-rose-500 group-hover/btn:text-white text-slate-400 transition-all shrink-0 self-center font-bold">
                 {{ copiedIndex === rIdx ? '✓ COPIED' : 'COPY →' }}
               </span>
             </button>
@@ -252,7 +230,7 @@
         to="/dashboard" 
         class="inline-flex items-center gap-2 text-xs font-mono font-bold text-white bg-gradient-to-r from-rose-500 to-violet-600 hover:from-rose-600 hover:to-violet-700 px-4 py-2.5 rounded-xl shadow-lg shadow-rose-950/50 hover:scale-105 active:scale-95 transition-all"
       >
-        <span>ANALYZE YOUR OWN MESSAGE</span>
+        <span>OVERTHINK YOUR OWN MESSAGE</span>
         <span>→</span>
       </NuxtLink>
     </div>

@@ -3,15 +3,23 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
+  runtimeConfig: {
+    // Private keys on server-side
+    geminiApiKey: process.env.GEMINI_API_KEY || '',
+    openaiApiKey: process.env.OPENAI_API_KEY || '',
+    public: {
+      apiBase: '/api'
+    }
+  },
   app: {
     head: {
-      title: 'EnnalumNthayirikkum..? | AI Overthinking Engine',
+      title: 'EnnalumNthayirikkum..? | The Overthinking Engine',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
-          content: 'Because “ok” was obviously never just “okay”. Turn innocent messages into catastrophic forensic investigations with 97.4% overthinking accuracy.'
+          content: 'Because “ok” was obviously never just “okay”. Turn innocent dry messages into hilariously unhinged overthinking breakdowns with 99.4% paranoia accuracy.'
         },
         { name: 'theme-color', content: '#08090d' }
       ],
