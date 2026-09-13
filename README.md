@@ -115,7 +115,7 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- **Thanusree S N**: Frontend architecture, interactive UI/UX components (mouse glows, reactive sound effects, dynamic modals), and Tailwind CSS styling.
+- **Thanusree S N**: Frontend architecture, interactive UI/UX components (mouse glows, dynamic modals), and Tailwind CSS styling.
 - **Sanjana Bejoy**: Nuxt fullstack backend API (`/api/analyze`), Gemini AI integration & prompt engineering, and the dynamic heuristic fallback engine.
 
 ---
