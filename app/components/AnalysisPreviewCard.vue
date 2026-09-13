@@ -1,31 +1,31 @@
 <template>
-  <div class="w-full glass-panel-elevated rounded-3xl p-5 sm:p-8 border border-white/10 relative overflow-hidden transition-all duration-300">
+  <div class="w-full glass-panel-elevated rounded-3xl p-5 sm:p-8 border border-champagne/15 relative overflow-hidden transition-all duration-300 shadow-2xl shadow-luxury-950">
     
     <!-- Top Interactive Specimen Picker -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-champagne/10">
       <div>
         <div class="flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
-          <span class="text-xs font-mono font-bold tracking-wider text-rose-400 uppercase">
+          <span class="w-2.5 h-2.5 rounded-full bg-wine animate-pulse"></span>
+          <span class="text-xs font-mono font-bold tracking-wider text-champagne uppercase">
             THE OVERTHINKING LAB 🔬
           </span>
-          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono bg-rose-500/15 text-rose-300 border border-rose-500/25">
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono bg-wine/20 text-champagne border border-wine/40">
             {{ activeSpecimen.severity }}
           </span>
         </div>
-        <p class="text-xs font-sans text-slate-400 mt-1">Pick a dry text to watch us spiral over it:</p>
+        <p class="text-xs font-sans text-champagne/60 mt-1">Pick a dry text to watch us spiral over it:</p>
       </div>
 
       <!-- Specimen Selector Pills -->
-      <div class="flex flex-wrap items-center gap-1.5 bg-obsidian-950/80 p-1.5 rounded-2xl border border-white/5">
+      <div class="flex flex-wrap items-center gap-1.5 bg-luxury-950/80 p-1.5 rounded-2xl border border-champagne/10">
         <button 
           v-for="(specimen, idx) in specimens" 
           :key="specimen.id"
           @click="selectSpecimen(idx)"
           class="px-3 py-1.5 text-xs font-mono rounded-xl transition-all font-semibold"
           :class="currentSpecimenIndex === idx 
-            ? 'bg-rose-500 text-white shadow-md shadow-rose-950/60 scale-105' 
-            : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'"
+            ? 'bg-wine text-warm shadow-md shadow-wine/40 scale-105' 
+            : 'text-champagne/60 hover:text-warm hover:bg-wine/20'"
         >
           "{{ specimen.text }}"
         </button>
@@ -33,13 +33,13 @@
     </div>
 
     <!-- Target Chat Message Inspection Card -->
-    <div class="mt-6 p-5 sm:p-6 rounded-2xl bg-obsidian-950/90 border border-white/5 relative group/bubble">
-      <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-3">
+    <div class="mt-6 p-5 sm:p-6 rounded-2xl bg-luxury-950/90 border border-champagne/10 relative group/bubble">
+      <div class="flex items-center justify-between text-xs font-mono text-champagne/60 mb-3">
         <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded bg-white/10 text-slate-200 text-[10px] font-semibold tracking-wider">THE TEXT 💬</span>
-          <span class="text-slate-400 font-mono">{{ activeSpecimen.timestamp }}</span>
+          <span class="px-2 py-0.5 rounded bg-wine/30 text-champagne border border-wine/30 text-[10px] font-semibold tracking-wider">THE TEXT 💬</span>
+          <span class="text-champagne/60 font-mono">{{ activeSpecimen.timestamp }}</span>
         </div>
-        <span class="text-rose-400 text-xs font-semibold font-mono">{{ activeSpecimen.subtextThreat }}</span>
+        <span class="text-champagne text-xs font-semibold font-mono">{{ activeSpecimen.subtextThreat }}</span>
       </div>
 
       <!-- Real Chat Message Visualizer -->
@@ -47,29 +47,29 @@
         <div class="flex items-end gap-3">
           <div 
             @click="inspectMessageWord"
-            class="cursor-pointer group/msg relative bg-emerald-950/80 hover:bg-emerald-900/90 border border-emerald-500/40 hover:border-emerald-400 px-6 py-3.5 rounded-3xl rounded-bl-sm max-w-md shadow-xl shadow-emerald-950/50 transition-all hover:scale-[1.02] active:scale-95"
+            class="cursor-pointer group/msg relative bg-wine/40 hover:bg-wine/60 border border-champagne/30 hover:border-champagne/60 px-6 py-3.5 rounded-3xl rounded-bl-sm max-w-md shadow-xl shadow-wine/20 transition-all hover:scale-[1.02] active:scale-95"
           >
-            <p class="text-2xl sm:text-3xl font-mono font-bold text-white tracking-wide">
+            <p class="text-2xl sm:text-3xl font-mono font-bold text-warm tracking-wide">
               "{{ activeSpecimen.text }}"
             </p>
-            <div class="flex items-center justify-end gap-1.5 mt-1.5 text-[11px] font-mono text-emerald-400">
+            <div class="flex items-center justify-end gap-1.5 mt-1.5 text-[11px] font-mono text-champagne">
               <span>{{ activeSpecimen.time }}</span>
-              <span class="text-cyan-400 font-bold">✓✓</span>
+              <span class="text-champagne font-bold">✓✓</span>
             </div>
             
-            <div class="absolute -top-2.5 -right-2.5 bg-rose-500 text-white text-[9px] font-mono px-2 py-0.5 rounded-full font-bold shadow-md animate-bounce">
+            <div class="absolute -top-2.5 -right-2.5 bg-wine text-warm border border-champagne/30 text-[9px] font-mono px-2 py-0.5 rounded-full font-bold shadow-md animate-bounce">
               TAP TO DECODE
             </div>
           </div>
 
-          <div class="text-xs font-sans text-slate-400 max-w-xs leading-relaxed hidden md:block">
-            <span class="text-rose-400 font-semibold font-mono">The real tea:</span> {{ activeSpecimen.quickSummary }}
+          <div class="text-xs font-sans text-champagne/70 max-w-xs leading-relaxed hidden md:block">
+            <span class="text-champagne font-semibold font-mono">The real tea:</span> {{ activeSpecimen.quickSummary }}
           </div>
         </div>
 
         <!-- Paranoia Level Stepper -->
-        <div class="flex flex-col gap-1.5 bg-obsidian-900/90 p-3 rounded-2xl border border-white/10 shrink-0">
-          <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">PANIC LEVEL</span>
+        <div class="flex flex-col gap-1.5 bg-luxury-900/90 p-3 rounded-2xl border border-champagne/10 shrink-0">
+          <span class="text-[10px] font-mono text-champagne/60 uppercase tracking-wider">PANIC LEVEL</span>
           <div class="flex items-center gap-1">
             <button 
               v-for="lvl in [1, 2, 3]" 
@@ -77,8 +77,8 @@
               @click="paranoiaLevel = lvl"
               class="px-2.5 py-1 text-[11px] font-mono font-bold rounded-lg transition-all"
               :class="paranoiaLevel === lvl 
-                ? 'bg-rose-500 text-white shadow-sm shadow-rose-950' 
-                : 'bg-obsidian-950 text-slate-500 hover:text-slate-300 border border-white/5'"
+                ? 'bg-wine text-warm shadow-sm shadow-wine/40' 
+                : 'bg-luxury-950 text-champagne/40 hover:text-champagne border border-champagne/10'"
             >
               LVL {{ lvl }}
             </button>
@@ -88,12 +88,12 @@
 
       <!-- Pop-open interactive note if clicked -->
       <transition enter-active-class="transition duration-200 ease-out" enter-from-class="transform scale-95 opacity-0" enter-to-class="transform scale-100 opacity-100">
-        <div v-if="showEvidenceAnnotation" class="mt-4 p-3.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-xs font-sans text-rose-200 flex items-center justify-between">
+        <div v-if="showEvidenceAnnotation" class="mt-4 p-3.5 rounded-xl bg-wine/20 border border-wine/40 text-xs font-sans text-champagne flex items-center justify-between">
           <div class="flex items-center gap-2">
             <span>☕</span>
-            <span><strong>The Real Tea:</strong> {{ activeSpecimen.annotation }}</span>
+            <span><strong class="text-warm">The Real Tea:</strong> {{ activeSpecimen.annotation }}</span>
           </div>
-          <button @click="showEvidenceAnnotation = false" class="text-slate-400 hover:text-white text-sm px-2">✕</button>
+          <button @click="showEvidenceAnnotation = false" class="text-champagne/60 hover:text-warm text-sm px-2">✕</button>
         </div>
       </transition>
     </div>
@@ -101,25 +101,25 @@
     <!-- Core Dynamic Metrics Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
       
-      <div class="p-5 rounded-2xl bg-obsidian-900/90 border border-cyan-500/25 relative overflow-hidden group/metric hover:border-cyan-500/50 transition-colors">
-        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block">CHANCE YOU'RE COOKED</span>
+      <div class="p-5 rounded-2xl bg-luxury-900/90 border border-wine/40 relative overflow-hidden group/metric hover:border-champagne/40 transition-colors">
+        <span class="text-xs font-mono text-champagne/70 uppercase tracking-wider block">CHANCE YOU'RE COOKED</span>
         <div class="flex items-baseline gap-2 mt-1">
-          <span class="text-3xl sm:text-4xl font-display font-black text-cyan-400">{{ activeMetrics.danger }}</span>
-          <span class="text-[11px] font-mono text-cyan-300 font-bold">CALCULATED</span>
+          <span class="text-3xl sm:text-4xl font-display font-black text-champagne">{{ activeMetrics.danger }}</span>
+          <span class="text-[11px] font-mono text-champagne/60 font-bold">CALCULATED</span>
         </div>
-        <div class="w-full bg-slate-800/80 h-1.5 rounded-full mt-3 overflow-hidden">
-          <div class="bg-cyan-400 h-full rounded-full transition-all duration-500" :style="{ width: activeMetrics.danger }"></div>
+        <div class="w-full bg-luxury-950 h-1.5 rounded-full mt-3 overflow-hidden border border-champagne/10">
+          <div class="bg-gradient-to-r from-wine to-champagne h-full rounded-full transition-all duration-500" :style="{ width: activeMetrics.danger }"></div>
         </div>
       </div>
 
-      <div class="p-5 rounded-2xl bg-obsidian-900/90 border border-violet-500/25 relative overflow-hidden group/metric hover:border-violet-500/50 transition-colors">
-        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block">DRY TEXT ENERGY</span>
+      <div class="p-5 rounded-2xl bg-luxury-900/90 border border-wine/40 relative overflow-hidden group/metric hover:border-champagne/40 transition-colors">
+        <span class="text-xs font-mono text-champagne/70 uppercase tracking-wider block">DRY TEXT ENERGY</span>
         <div class="flex items-baseline gap-2 mt-1">
-          <span class="text-3xl sm:text-4xl font-display font-black text-violet-400">{{ activeMetrics.hostility }}</span>
-          <span class="text-[11px] font-mono text-violet-300 font-bold">ICED</span>
+          <span class="text-3xl sm:text-4xl font-display font-black text-warm">{{ activeMetrics.hostility }}</span>
+          <span class="text-[11px] font-mono text-champagne/60 font-bold">ICED</span>
         </div>
-        <div class="w-full bg-slate-800/80 h-1.5 rounded-full mt-3 overflow-hidden">
-          <div class="bg-violet-400 h-full rounded-full transition-all duration-500" :style="{ width: activeMetrics.hostility }"></div>
+        <div class="w-full bg-luxury-950 h-1.5 rounded-full mt-3 overflow-hidden border border-champagne/10">
+          <div class="bg-champagne h-full rounded-full transition-all duration-500" :style="{ width: activeMetrics.hostility }"></div>
         </div>
       </div>
 
@@ -129,13 +129,13 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-6">
       
       <!-- Red Flags Dissection -->
-      <div class="p-5 sm:p-6 rounded-2xl bg-obsidian-900/70 border border-white/10 flex flex-col justify-between">
+      <div class="p-5 sm:p-6 rounded-2xl bg-luxury-900/70 border border-champagne/15 flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <h4 class="text-xs font-mono font-bold tracking-wider text-slate-200 uppercase flex items-center gap-2">
-              <span class="text-rose-400">🚩</span> SPOTTED RED FLAGS ({{ activeSpecimen.flags.length }})
+            <h4 class="text-xs font-mono font-bold tracking-wider text-warm uppercase flex items-center gap-2">
+              <span class="text-wine">🚩</span> SPOTTED RED FLAGS ({{ activeSpecimen.flags.length }})
             </h4>
-            <span class="text-[10px] font-mono text-slate-400">100% FACTUAL</span>
+            <span class="text-[10px] font-mono text-champagne/60">100% FACTUAL</span>
           </div>
 
           <div class="space-y-2.5">
@@ -144,13 +144,13 @@
               :key="fIdx"
               class="p-3 rounded-xl border text-xs flex items-start gap-3 transition-colors"
               :class="flag.isGreen 
-                ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-200' 
-                : 'bg-rose-500/10 border-rose-500/20 text-rose-200'"
+                ? 'bg-champagne/10 border-champagne/30 text-champagne' 
+                : 'bg-wine/20 border-wine/40 text-warm'"
             >
               <span class="shrink-0 font-mono font-bold mt-0.5">{{ flag.isGreen ? '🟩' : '🚩' }} 0{{ fIdx + 1 }}</span>
               <div>
-                <strong :class="flag.isGreen ? 'text-emerald-300' : 'text-rose-300'" class="font-semibold block font-sans">{{ flag.title }}</strong>
-                <p class="text-slate-300 text-[11px] mt-0.5 font-sans leading-relaxed">{{ flag.desc }}</p>
+                <strong :class="flag.isGreen ? 'text-champagne' : 'text-warm'" class="font-semibold block font-sans">{{ flag.title }}</strong>
+                <p class="text-champagne/70 text-[11px] mt-0.5 font-sans leading-relaxed">{{ flag.desc }}</p>
               </div>
             </div>
           </div>
@@ -158,21 +158,21 @@
       </div>
 
       <!-- Multi-Track Absurd Interpretations & Savage Replies -->
-      <div class="p-5 sm:p-6 rounded-2xl bg-obsidian-900/70 border border-white/10 flex flex-col justify-between">
+      <div class="p-5 sm:p-6 rounded-2xl bg-luxury-900/70 border border-champagne/15 flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <h4 class="text-xs font-mono font-bold tracking-wider text-slate-200 uppercase flex items-center gap-2">
-              <span class="text-violet-400">⚡</span> UNHINGED THEORIES
+            <h4 class="text-xs font-mono font-bold tracking-wider text-warm uppercase flex items-center gap-2">
+              <span class="text-champagne">⚡</span> UNHINGED THEORIES
             </h4>
             
             <!-- Theory Selector Tabs -->
-            <div class="flex items-center gap-1 bg-obsidian-950 p-1 rounded-xl border border-white/5">
+            <div class="flex items-center gap-1 bg-luxury-950 p-1 rounded-xl border border-champagne/10">
               <button 
                 v-for="(theory, tIdx) in activeSpecimen.theories" 
                 :key="tIdx"
                 @click="activeTheory = tIdx"
                 class="px-2.5 py-1 text-[10px] font-mono rounded-lg transition-colors font-bold"
-                :class="activeTheory === tIdx ? 'bg-violet-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'"
+                :class="activeTheory === tIdx ? 'bg-wine text-warm shadow-sm' : 'text-champagne/60 hover:text-warm'"
               >
                 THEORY {{ tIdx + 1 }}
               </button>
@@ -180,24 +180,24 @@
           </div>
 
           <!-- Active Theory Card -->
-          <div class="p-4 rounded-xl bg-violet-500/10 border border-violet-500/30 mb-5 transition-all">
-            <div class="flex items-center justify-between text-xs font-mono text-violet-300 mb-1.5">
+          <div class="p-4 rounded-xl bg-wine/15 border border-wine/40 mb-5 transition-all">
+            <div class="flex items-center justify-between text-xs font-mono text-champagne mb-1.5">
               <span class="font-bold">{{ activeSpecimen.theories[activeTheory]?.title }}</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-full bg-violet-500/20 text-violet-200 font-bold">
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-wine/30 text-champagne font-bold border border-champagne/20">
                 {{ activeSpecimen.theories[activeTheory]?.probability }}
               </span>
             </div>
-            <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-sans">
+            <p class="text-xs sm:text-sm text-warm/90 leading-relaxed font-sans">
               "{{ activeSpecimen.theories[activeTheory]?.description }}"
             </p>
           </div>
         </div>
 
         <!-- Recommended Savage Counter-Responses -->
-        <div class="mt-4 pt-4 border-t border-white/10">
+        <div class="mt-4 pt-4 border-t border-champagne/10">
           <div class="flex items-center justify-between mb-2.5">
-            <span class="text-[11px] font-mono font-semibold text-slate-400 uppercase">PETTY COMEBACKS 🔥</span>
-            <span class="text-[10px] font-mono text-rose-400">TAP TO COPY</span>
+            <span class="text-[11px] font-mono font-semibold text-champagne/70 uppercase">PETTY COMEBACKS 🔥</span>
+            <span class="text-[10px] font-mono text-champagne">TAP TO COPY</span>
           </div>
 
           <div class="space-y-2">
@@ -205,10 +205,10 @@
               v-for="(reply, rIdx) in activeSpecimen.savageReplies" 
               :key="rIdx"
               @click="copyReply(reply, rIdx)"
-              class="w-full text-left p-3 rounded-xl bg-white/5 hover:bg-rose-500/15 border border-white/10 hover:border-rose-500/40 text-xs font-mono text-slate-200 flex items-center justify-between gap-3 transition-all group/btn active:scale-98"
+              class="w-full text-left p-3 rounded-xl bg-luxury-950/60 hover:bg-wine/30 border border-champagne/10 hover:border-wine/50 text-xs font-mono text-warm flex items-center justify-between gap-3 transition-all group/btn active:scale-98"
             >
-              <span class="flex-grow text-slate-200 font-medium break-words leading-relaxed">"{{ reply }}"</span>
-              <span class="text-[10px] font-mono px-2.5 py-1 rounded-lg bg-white/5 group-hover/btn:bg-rose-500 group-hover/btn:text-white text-slate-400 transition-all shrink-0 self-center font-bold">
+              <span class="flex-grow text-warm font-medium break-words leading-relaxed">"{{ reply }}"</span>
+              <span class="text-[10px] font-mono px-2.5 py-1 rounded-lg bg-wine/40 group-hover/btn:bg-wine group-hover/btn:text-warm text-champagne transition-all shrink-0 self-center font-bold border border-champagne/20">
                 {{ copiedIndex === rIdx ? '✓ COPIED' : 'COPY →' }}
               </span>
             </button>
@@ -220,15 +220,15 @@
     </div>
 
     <!-- Bottom Action Bar -->
-    <div class="mt-6 pt-5 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-      <div class="flex items-center gap-2 text-xs font-sans text-slate-400">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+    <div class="mt-6 pt-5 border-t border-champagne/10 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-xs font-sans text-champagne/60">
+        <span class="w-2 h-2 rounded-full bg-champagne"></span>
         <span>Have an even more traumatizing text?</span>
       </div>
 
       <NuxtLink 
         to="/dashboard" 
-        class="inline-flex items-center gap-2 text-xs font-mono font-bold text-white bg-gradient-to-r from-rose-500 to-violet-600 hover:from-rose-600 hover:to-violet-700 px-4 py-2.5 rounded-xl shadow-lg shadow-rose-950/50 hover:scale-105 active:scale-95 transition-all"
+        class="inline-flex items-center gap-2 text-xs font-mono font-bold text-warm bg-wine hover:bg-wine-hover border border-champagne/30 px-4 py-2.5 rounded-xl shadow-lg shadow-wine/30 hover:scale-105 active:scale-95 transition-all"
       >
         <span>OVERTHINK YOUR OWN MESSAGE</span>
         <span>→</span>

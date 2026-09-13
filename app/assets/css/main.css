@@ -5,74 +5,62 @@
 @layer base {
   :root {
     color-scheme: dark;
+    --bg-luxury: #0A0809;
+    --color-wine: #6B1E32;
+    --color-champagne: #E8C7B8;
+    --color-warm: #F8F1EE;
   }
 
   body {
-    @apply bg-obsidian-950 text-slate-200 font-sans antialiased selection:bg-rose-500/30 selection:text-rose-200 overflow-x-hidden;
+    @apply bg-[#0A0809] text-[#F8F1EE] font-sans antialiased selection:bg-[#6B1E32]/50 selection:text-[#E8C7B8] overflow-x-hidden;
+    background-color: #0A0809;
   }
 }
 
-/* Forensic & Cyberpunk Grid Backgrounds */
+/* Luxury Grid & Ambient Glows */
 .bg-grid-pattern {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(232, 199, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 199, 184, 0.03) 1px, transparent 1px);
 }
 
 .bg-radial-vignette {
-  background: radial-gradient(circle at 50% 30%, rgba(244, 63, 94, 0.08) 0%, rgba(139, 92, 246, 0.05) 35%, rgba(5, 6, 8, 0.95) 75%);
+  background: radial-gradient(circle at 50% 30%, rgba(107, 30, 50, 0.18) 0%, rgba(232, 199, 184, 0.06) 40%, rgba(10, 8, 9, 0.98) 75%);
 }
 
 .bg-radar-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(244, 63, 94, 0.15) 0%, rgba(16, 185, 129, 0.05) 50%, transparent 80%);
+  background: radial-gradient(circle at 50% 0%, rgba(107, 30, 50, 0.25) 0%, rgba(232, 199, 184, 0.08) 50%, transparent 80%);
 }
 
-/* Glassmorphism & Cyber Card Effects */
+/* Glassmorphism Luxury Panels */
 .glass-panel {
-  background: rgba(14, 17, 24, 0.7);
+  background: rgba(19, 14, 16, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(232, 199, 184, 0.1);
 }
 
 .glass-panel-elevated {
-  background: rgba(20, 24, 36, 0.8);
+  background: rgba(26, 20, 23, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(232, 199, 184, 0.16);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.85), 0 0 30px -10px rgba(107, 30, 50, 0.3);
 }
 
 .glass-card-interactive {
-  background: rgba(14, 17, 24, 0.6);
+  background: rgba(19, 14, 16, 0.65);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(232, 199, 184, 0.08);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card-interactive:hover {
-  background: rgba(20, 24, 36, 0.85);
-  border-color: rgba(244, 63, 94, 0.4);
+  background: rgba(35, 27, 31, 0.9);
+  border-color: rgba(232, 199, 184, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px -8px rgba(244, 63, 94, 0.2);
-}
-
-/* Forensic scanning line */
-.scanline-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.scanline-effect::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-  z-index: 2;
-  background-size: 100% 3px, 6px 100%;
-  pointer-events: none;
+  box-shadow: 0 12px 30px -8px rgba(107, 30, 50, 0.35);
 }
 
 /* Custom Scrollbar */
@@ -81,12 +69,12 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #090a0f;
+  background: #0A0809;
 }
 ::-webkit-scrollbar-thumb {
-  background: #22283d;
+  background: #2C2227;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #f43f5e;
+  background: #6B1E32;
 }

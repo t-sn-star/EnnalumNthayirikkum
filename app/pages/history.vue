@@ -1,20 +1,20 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="flex flex-col min-h-screen selection:bg-wine/40 selection:text-champagne">
     <Navbar />
 
     <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
           <div class="flex items-center gap-2 mb-1">
-            <span class="text-xs font-mono text-violet-400 font-bold tracking-wider uppercase">// SPIRAL VAULT</span>
+            <span class="text-xs font-mono text-champagne font-bold tracking-wider uppercase">// SPIRAL VAULT</span>
           </div>
-          <h1 class="font-display font-bold text-3xl sm:text-4xl text-white">Past Overthinking Sessions</h1>
-          <p class="text-xs sm:text-sm font-mono text-slate-400 mt-1">Every dry text, unanswered message, and ruined mood saved in one place.</p>
+          <h1 class="font-display font-bold text-3xl sm:text-4xl text-warm">Past Overthinking Sessions</h1>
+          <p class="text-xs sm:text-sm font-mono text-champagne/70 mt-1">Every dry text, unanswered message, and ruined mood saved in one place.</p>
         </div>
 
         <NuxtLink 
           to="/dashboard"
-          class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-violet-600 text-white font-mono text-xs font-bold uppercase tracking-wider shadow-lg shadow-rose-950/40"
+          class="px-5 py-2.5 rounded-xl bg-wine hover:bg-wine-hover border border-champagne/30 text-warm font-mono text-xs font-bold uppercase tracking-wider shadow-lg shadow-wine/40 transition-all hover:scale-105 active:scale-95"
         >
           + OVERTHINK A NEW TEXT
         </NuxtLink>
@@ -25,29 +25,29 @@
         <div 
           v-for="item in caseList" 
           :key="item.id"
-          class="glass-panel p-5 rounded-2xl border border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-rose-500/30 transition-all"
+          class="glass-panel p-5 rounded-2xl border border-champagne/15 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-champagne/40 transition-all bg-luxury-900/60"
         >
           <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center font-mono text-rose-400 text-xs font-bold shrink-0">
+            <div class="w-10 h-10 rounded-xl bg-wine/20 border border-wine/40 flex items-center justify-center font-mono text-champagne text-xs font-bold shrink-0">
               #{{ item.id.slice(-3) }}
             </div>
             <div>
               <div class="flex items-center gap-2 text-xs font-mono">
-                <span class="font-bold text-white font-mono text-base">"{{ item.text }}"</span>
-                <span class="px-2 py-0.5 rounded text-[10px] bg-white/5 text-slate-400">{{ item.date }}</span>
+                <span class="font-bold text-warm font-mono text-base">"{{ item.text }}"</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-luxury-950 border border-champagne/10 text-champagne/60">{{ item.date }}</span>
               </div>
-              <p class="text-xs text-slate-400 mt-1 font-sans">{{ item.verdict }}</p>
+              <p class="text-xs text-champagne/70 mt-1 font-sans">{{ item.verdict }}</p>
             </div>
           </div>
 
           <div class="flex items-center gap-4 self-end md:self-auto shrink-0">
             <div class="text-right">
-              <span class="text-[10px] font-mono text-slate-500 uppercase block">PANIC SCORE</span>
-              <span class="text-sm font-mono font-bold text-rose-400">{{ item.score }}</span>
+              <span class="text-[10px] font-mono text-champagne/50 uppercase block">PANIC SCORE</span>
+              <span class="text-sm font-mono font-bold text-champagne">{{ item.score }}</span>
             </div>
             <NuxtLink 
               :to="`/report/${item.id}`"
-              class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-mono text-slate-200 border border-white/10"
+              class="px-4 py-2 rounded-lg bg-luxury-950 hover:bg-wine/30 text-xs font-mono text-champagne hover:text-warm border border-champagne/15 transition-colors"
             >
               VIEW BREAKDOWN →
             </NuxtLink>

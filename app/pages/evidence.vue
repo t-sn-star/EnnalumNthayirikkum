@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen selection:bg-rose-500/30 selection:text-rose-200">
+  <div class="flex flex-col min-h-screen selection:bg-wine/40 selection:text-champagne">
     <!-- Navbar -->
     <Navbar />
 
@@ -7,27 +7,27 @@
       
       <!-- Header Section -->
       <div class="text-center mb-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-xs font-mono text-rose-400 mb-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-wine/20 border border-wine/40 text-xs font-mono text-champagne mb-3">
           <span>PAGE 2 — EVIDENCE</span>
         </div>
-        <h1 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight">
+        <h1 class="font-display font-black text-3xl sm:text-5xl text-warm tracking-tight">
           What are we working with?
         </h1>
-        <p class="text-sm sm:text-base text-slate-400 font-sans mt-3 max-w-lg mx-auto">
+        <p class="text-sm sm:text-base text-champagne/70 font-sans mt-3 max-w-lg mx-auto">
           Choose your evidence. We promise not to jump to conclusions.
         </p>
       </div>
 
       <!-- Mode Selector (Upload Screenshot vs Paste Message) -->
       <div class="flex justify-center mb-8">
-        <div class="inline-flex p-1.5 rounded-2xl bg-obsidian-900 border border-white/10 shadow-lg">
+        <div class="inline-flex p-1.5 rounded-2xl bg-luxury-900 border border-champagne/15 shadow-lg">
           <button 
             type="button"
             @click="activeTab = 'upload'"
             class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-sans font-semibold transition-all"
             :class="activeTab === 'upload' 
-              ? 'bg-rose-500 text-white shadow-md shadow-rose-950/60' 
-              : 'text-slate-400 hover:text-white'"
+              ? 'bg-wine text-warm shadow-md shadow-wine/40' 
+              : 'text-champagne/60 hover:text-warm'"
           >
             <span>📸</span>
             <span>Upload a Screenshot</span>
@@ -38,8 +38,8 @@
             @click="activeTab = 'paste'"
             class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-sans font-semibold transition-all"
             :class="activeTab === 'paste' 
-              ? 'bg-rose-500 text-white shadow-md shadow-rose-950/60' 
-              : 'text-slate-400 hover:text-white'"
+              ? 'bg-wine text-warm shadow-md shadow-wine/40' 
+              : 'text-champagne/60 hover:text-warm'"
           >
             <span>💬</span>
             <span>Paste the Message</span>
@@ -55,8 +55,8 @@
           @drop.prevent="handleFileDrop"
           class="glass-panel p-8 sm:p-12 rounded-3xl border-2 border-dashed transition-all duration-300 text-center flex flex-col items-center justify-center cursor-pointer group"
           :class="isDragging 
-            ? 'border-rose-500 bg-rose-500/10 scale-[1.01]' 
-            : 'border-white/15 hover:border-rose-500/50 bg-obsidian-900/60'"
+            ? 'border-champagne bg-wine/20 scale-[1.01]' 
+            : 'border-champagne/20 hover:border-champagne/60 bg-luxury-900/60'"
           @click="triggerFileInput"
         >
           <input 
@@ -69,45 +69,45 @@
 
           <!-- If image is already selected -->
           <div v-if="selectedImage" class="w-full flex flex-col items-center">
-            <div class="relative max-w-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl group/preview">
+            <div class="relative max-w-sm rounded-2xl overflow-hidden border border-champagne/20 shadow-2xl group/preview">
               <img :src="selectedImage" alt="Evidence Preview" class="w-full max-h-72 object-contain bg-black/40" />
               <button 
                 type="button"
                 @click.stop="removeSelectedImage"
-                class="absolute top-2 right-2 p-1.5 rounded-full bg-black/80 text-rose-400 hover:text-white hover:bg-rose-600 transition-colors"
+                class="absolute top-2 right-2 p-1.5 rounded-full bg-luxury-950/90 text-champagne hover:text-warm hover:bg-wine transition-colors"
                 title="Remove evidence"
               >
                 ✕
               </button>
             </div>
-            <div class="mt-4 text-xs font-mono text-slate-300 flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <div class="mt-4 text-xs font-mono text-champagne flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-champagne"></span>
               <span>{{ fileName }} ({{ fileSize }})</span>
             </div>
           </div>
 
           <!-- Default Upload State -->
           <div v-else class="flex flex-col items-center">
-            <div class="w-16 h-16 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+            <div class="w-16 h-16 rounded-2xl bg-wine/20 border border-wine/40 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
               📸
             </div>
-            <h3 class="font-display font-bold text-lg text-white">
+            <h3 class="font-display font-bold text-lg text-warm">
               Upload a Screenshot
             </h3>
-            <p class="text-xs sm:text-sm text-slate-400 font-sans mt-1 max-w-sm">
+            <p class="text-xs sm:text-sm text-champagne/70 font-sans mt-1 max-w-sm">
               For when the evidence is too suspicious to type out.
             </p>
 
             <div class="mt-5">
               <button 
                 type="button"
-                class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-violet-600 hover:from-rose-600 hover:to-violet-700 text-white font-sans text-xs font-bold tracking-wide shadow-lg shadow-rose-950/40 hover:scale-105 active:scale-95 transition-all"
+                class="px-5 py-2.5 rounded-xl bg-wine hover:bg-wine-hover border border-champagne/30 text-warm font-sans text-xs font-bold tracking-wide shadow-lg shadow-wine/30 hover:scale-105 active:scale-95 transition-all"
               >
                 Upload Screenshot
               </button>
             </div>
 
-            <p class="text-[11px] font-mono text-slate-500 mt-4">
+            <p class="text-[11px] font-mono text-champagne/50 mt-4">
               Supports .png, .jpg, .jpeg
             </p>
           </div>
@@ -116,12 +116,12 @@
 
       <!-- Option 2: Paste the Message -->
       <div v-show="activeTab === 'paste'" class="space-y-6">
-        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 bg-obsidian-900/60 shadow-xl">
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-champagne/15 bg-luxury-900/60 shadow-xl">
           <div class="mb-4">
-            <h3 class="font-display font-bold text-lg text-white">
+            <h3 class="font-display font-bold text-lg text-warm">
               Paste the Message
             </h3>
-            <p class="text-xs sm:text-sm text-slate-400 font-sans mt-1">
+            <p class="text-xs sm:text-sm text-champagne/70 font-sans mt-1">
               For when you only have one message and way too many questions.
             </p>
           </div>
@@ -131,26 +131,26 @@
               v-model="pastedText"
               rows="4"
               placeholder="e.g. 'ok', 'Seen 2:14 AM', 'fine.', 'we need to talk', '👍'"
-              class="w-full p-4 rounded-2xl bg-obsidian-950/90 border border-white/10 text-white font-mono text-sm placeholder-slate-600 focus:outline-none focus:border-rose-500/50 transition-colors"
+              class="w-full p-4 rounded-2xl bg-luxury-950/90 border border-champagne/15 text-warm font-mono text-sm placeholder-champagne/30 focus:outline-none focus:border-champagne/50 transition-colors"
             ></textarea>
 
             <button 
               v-if="pastedText"
               @click="pastedText = ''"
-              class="absolute top-3 right-3 text-xs font-mono text-slate-500 hover:text-white px-2 py-1"
+              class="absolute top-3 right-3 text-xs font-mono text-champagne/50 hover:text-champagne px-2 py-1"
             >
               CLEAR
             </button>
           </div>
 
           <!-- Quick Presets -->
-          <div class="flex flex-wrap items-center gap-2 mt-4 text-xs font-sans text-slate-400">
-            <span class="font-medium text-slate-500">Quick Test:</span>
+          <div class="flex flex-wrap items-center gap-2 mt-4 text-xs font-sans text-champagne/70">
+            <span class="font-medium text-champagne/50">Quick Test:</span>
             <button 
               v-for="preset in ['ok', 'Seen 2:14 AM', 'fine.', '👍', 'k', 'Nothing. Just tired.']"
               :key="preset"
               @click="pastedText = preset"
-              class="px-2.5 py-1 rounded-lg bg-white/5 hover:bg-rose-500/15 text-slate-300 hover:text-rose-200 border border-white/5 transition-all text-xs font-mono"
+              class="px-2.5 py-1 rounded-lg bg-luxury-950/70 hover:bg-wine/30 text-champagne hover:text-warm border border-champagne/15 transition-all text-xs font-mono"
             >
               "{{ preset }}"
             </button>
@@ -159,7 +159,7 @@
       </div>
 
       <!-- Universal Drag & Drop / Fallback Area Notice -->
-      <div class="mt-6 text-center text-xs font-sans text-slate-500">
+      <div class="mt-6 text-center text-xs font-sans text-champagne/50">
         <span>Drag & drop a screenshot or paste a message above</span>
       </div>
 
@@ -170,11 +170,11 @@
           :disabled="!hasEvidence || isLoading"
           class="w-full sm:w-auto px-10 py-4 rounded-2xl font-mono font-bold text-sm sm:text-base tracking-wider uppercase transition-all duration-300 shadow-xl flex items-center justify-center gap-2"
           :class="hasEvidence 
-            ? 'bg-gradient-to-r from-rose-500 via-rose-600 to-violet-600 hover:from-rose-600 hover:to-violet-700 text-white shadow-rose-950/60 hover:scale-105 active:scale-95 cursor-pointer border border-rose-400/40' 
-            : 'bg-white/5 text-slate-500 border border-white/5 cursor-not-allowed opacity-60'"
+            ? 'bg-wine hover:bg-wine-hover text-warm shadow-wine/40 hover:scale-105 active:scale-95 cursor-pointer border border-champagne/40' 
+            : 'bg-luxury-900 text-champagne/40 border border-champagne/10 cursor-not-allowed opacity-60'"
         >
           <span v-if="isLoading" class="flex items-center gap-2">
-            <span class="w-4 h-4 rounded-full border-2 border-white/30 border-t-white animate-spin"></span>
+            <span class="w-4 h-4 rounded-full border-2 border-champagne/30 border-t-champagne animate-spin"></span>
             <span>CALCULATING CATASTROPHE...</span>
           </span>
           <span v-else class="flex items-center gap-2">
@@ -183,7 +183,7 @@
           </span>
         </button>
 
-        <p v-if="!hasEvidence" class="text-[11px] font-sans text-slate-500 mt-2">
+        <p v-if="!hasEvidence" class="text-[11px] font-sans text-champagne/50 mt-2">
           Please upload a screenshot or paste a message to proceed.
         </p>
       </div>

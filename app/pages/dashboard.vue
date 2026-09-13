@@ -1,29 +1,29 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="flex flex-col min-h-screen selection:bg-wine/40 selection:text-champagne">
     <Navbar />
 
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
       <!-- Dashboard Header -->
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 border-b border-white/5">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 border-b border-champagne/10">
         <div>
           <div class="flex items-center gap-2 mb-1">
-            <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
-            <span class="text-xs font-mono text-rose-400 font-bold tracking-wider uppercase">OVERTHINKING HEADQUARTERS</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-wine animate-pulse"></span>
+            <span class="text-xs font-mono text-champagne font-bold tracking-wider uppercase">OVERTHINKING HEADQUARTERS</span>
           </div>
-          <h1 class="font-display font-bold text-3xl sm:text-4xl text-white">The Overthinker's Lab</h1>
-          <p class="text-xs sm:text-sm font-mono text-slate-400 mt-1">Turning innocent 2-letter texts into full-blown existential crises since forever.</p>
+          <h1 class="font-display font-bold text-3xl sm:text-4xl text-warm">The Overthinker's Lab</h1>
+          <p class="text-xs sm:text-sm font-mono text-champagne/70 mt-1">Turning innocent 2-letter texts into full-blown existential crises since forever.</p>
         </div>
 
         <div class="flex items-center gap-3">
           <NuxtLink 
             to="/evidence" 
-            class="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-mono text-slate-300 hover:text-white border border-white/10 transition-colors"
+            class="px-4 py-2.5 rounded-xl bg-luxury-900 hover:bg-wine/30 text-xs font-mono text-champagne hover:text-warm border border-champagne/15 transition-colors"
           >
             + UPLOAD SCREENSHOT 📸
           </NuxtLink>
           <NuxtLink 
             to="/history" 
-            class="px-4 py-2.5 rounded-xl bg-obsidian-900 hover:bg-obsidian-850 text-xs font-mono text-slate-300 hover:text-white border border-white/10 transition-colors"
+            class="px-4 py-2.5 rounded-xl bg-luxury-950 hover:bg-wine/20 text-xs font-mono text-champagne/80 hover:text-warm border border-champagne/15 transition-colors"
           >
             SAVED SPIRALS 📂
           </NuxtLink>
@@ -31,12 +31,12 @@
       </div>
 
       <!-- Quick Analysis Launcher -->
-      <div class="my-8 glass-panel p-6 sm:p-8 rounded-3xl border border-rose-500/20 shadow-xl">
+      <div class="my-8 glass-panel p-6 sm:p-8 rounded-3xl border border-champagne/15 shadow-xl">
         <div class="flex items-center justify-between mb-4">
-          <h2 class="text-sm font-mono font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+          <h2 class="text-sm font-mono font-bold text-warm uppercase tracking-wider flex items-center gap-2">
             <span>⚡</span> PASTE THE DRY TEXT 💬
           </h2>
-          <span class="text-[11px] font-mono text-rose-400">VIBE: READY TO SPIRAL</span>
+          <span class="text-[11px] font-mono text-champagne">VIBE: READY TO SPIRAL</span>
         </div>
 
         <div class="space-y-4">
@@ -44,17 +44,17 @@
             v-model="inputMsg"
             rows="3"
             placeholder="Paste suspicious text (e.g. 'k', 'sure', 'fine.', 'Seen 2:14 AM')..."
-            class="w-full p-4 rounded-2xl bg-obsidian-950/90 border border-white/10 text-white font-mono text-sm placeholder-slate-600 focus:outline-none focus:border-rose-500/50"
+            class="w-full p-4 rounded-2xl bg-luxury-950/90 border border-champagne/15 text-warm font-mono text-sm placeholder-champagne/30 focus:outline-none focus:border-champagne/50"
           ></textarea>
 
           <div class="flex flex-wrap items-center justify-between gap-4">
-            <div class="flex items-center gap-2 text-xs font-sans text-slate-400">
-              <span class="font-mono text-slate-500">WHO SENT IT:</span>
+            <div class="flex items-center gap-2 text-xs font-sans text-champagne/70">
+              <span class="font-mono text-champagne/50">WHO SENT IT:</span>
               <input 
                 type="text" 
                 v-model="suspectName"
                 placeholder="Crush / Ex / Boss / Friend"
-                class="px-3 py-1.5 rounded-lg bg-obsidian-950 border border-white/5 text-white text-xs placeholder-slate-700 focus:outline-none"
+                class="px-3 py-1.5 rounded-lg bg-luxury-950 border border-champagne/15 text-warm text-xs placeholder-champagne/30 focus:outline-none"
               />
             </div>
 
@@ -64,8 +64,8 @@
               :disabled="!inputMsg.trim()"
               class="px-6 py-3 rounded-xl font-mono text-xs font-bold tracking-wider uppercase transition-all shadow-lg"
               :class="inputMsg.trim() 
-                ? 'bg-gradient-to-r from-rose-500 to-violet-600 hover:from-rose-600 hover:to-violet-700 text-white shadow-rose-950/50 hover:scale-105 active:scale-95 cursor-pointer' 
-                : 'bg-white/5 text-slate-500 cursor-not-allowed opacity-60'"
+                ? 'bg-wine hover:bg-wine-hover text-warm border border-champagne/30 shadow-wine/40 hover:scale-105 active:scale-95 cursor-pointer' 
+                : 'bg-luxury-900 text-champagne/40 border border-champagne/10 cursor-not-allowed opacity-60'"
             >
               OVERTHINK THIS TEXT →
             </button>
@@ -76,10 +76,10 @@
       <!-- Recent Case Files Grid -->
       <div class="mt-8">
         <div class="flex items-center justify-between mb-4">
-          <h3 class="text-xs font-mono font-bold tracking-wider text-slate-300 uppercase">
+          <h3 class="text-xs font-mono font-bold tracking-wider text-warm uppercase">
             RECENT SPIRALS
           </h3>
-          <NuxtLink to="/history" class="text-xs font-mono text-rose-400 hover:underline">VIEW ALL SPIRALS →</NuxtLink>
+          <NuxtLink to="/history" class="text-xs font-mono text-champagne hover:underline">VIEW ALL SPIRALS →</NuxtLink>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -87,19 +87,19 @@
             v-for="item in recentCases" 
             :key="item.id"
             @click="openCase(item)"
-            class="text-left glass-card-interactive p-5 rounded-2xl border border-white/5 flex flex-col justify-between cursor-pointer group"
+            class="text-left glass-card-interactive p-5 rounded-2xl border border-champagne/15 flex flex-col justify-between cursor-pointer group hover:border-champagne/40 transition-all"
           >
             <div>
-              <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-2">
+              <div class="flex items-center justify-between text-[11px] font-mono text-champagne/50 mb-2">
                 <span>SPIRAL #{{ item.id }}</span>
-                <span class="text-rose-400 font-bold">{{ item.score }} PANIC</span>
+                <span class="text-champagne font-bold">{{ item.score }} PANIC</span>
               </div>
-              <p class="font-mono text-white text-base font-semibold">"{{ item.text }}"</p>
-              <p class="text-xs font-sans text-slate-400 mt-2 line-clamp-2">{{ item.verdict }}</p>
+              <p class="font-mono text-warm text-base font-semibold">"{{ item.text }}"</p>
+              <p class="text-xs font-sans text-champagne/70 mt-2 line-clamp-2">{{ item.verdict }}</p>
             </div>
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[10px] font-mono text-slate-500">
+            <div class="mt-4 pt-3 border-t border-champagne/10 flex items-center justify-between text-[10px] font-mono text-champagne/50">
               <span>FROM: {{ item.suspect }}</span>
-              <span class="text-rose-400 group-hover:underline">VIEW BREAKDOWN →</span>
+              <span class="text-champagne group-hover:underline">VIEW BREAKDOWN →</span>
             </div>
           </button>
         </div>
