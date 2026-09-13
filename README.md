@@ -105,7 +105,11 @@ For Hardware:
 #### Build Photos
 *N/A - Pure Software Project*
 
-### Project Demo
+### Project Link
+https://ennalum-nthayirikkum.vercel.app/
+
+### Github Repo Link
+https://github.com/t-sn-star/EnnalumNthayirikkum
 
 #### Video
 https://drive.google.com/file/d/1r4WjcEUpOxksl_gZuI1Cz8Qbo11r13m8/view?usp=drivesdk
