@@ -46,7 +46,7 @@ For Software:
 - **Languages used**: TypeScript, JavaScript, Vue (SFC), HTML5, CSS3
 - **Frameworks used**: Nuxt 4 (Nuxt.js), Vue 3, Nitro Engine
 - **Libraries used**: Tailwind CSS, `@lucide/vue` / `lucide-vue-next` (Lucide Icons), `@supabase/supabase-js`, Google Gemini Generative AI SDK / REST API
-- **Tools used**: Node.js, npm, VS Code, Git, GitHub
+- **Tools used**: Node.js, npm, VS Code, Git, GitHub, Vercel
 
 For Hardware:
 - *N/A (Software Project)*
@@ -108,14 +108,11 @@ For Hardware:
 ### Project Demo
 
 #### Video
-[Add your demo video link here]
-*Demonstration of text/screenshot analysis and real-time generation of unhinged overthinking reports.*
+https://drive.google.com/file/d/1r4WjcEUpOxksl_gZuI1Cz8Qbo11r13m8/view?usp=drivesdk
 
-#### Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- **Thanusree S N**: Frontend architecture, interactive UI/UX components (mouse glows, dynamic modals), and Tailwind CSS styling.
+- **Thanusree S N**: Frontend architecture, interactive UI/UX components (mouse glows, dynamic modals), and Tailwind CSS styling,Deployment.
 - **Sanjana Bejoy**: Nuxt fullstack backend API (`/api/analyze`), Gemini AI integration & prompt engineering, and the dynamic heuristic fallback engine.
 
 ---
