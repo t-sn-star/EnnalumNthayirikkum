@@ -2,27 +2,49 @@
 
 
 
-# [Project Name] 🎯
+# Ennalum Nthayirikkum... 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: 3spies
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Thanusree S N - School Of Engineering, CUSAT
+- Member 2: Sanjana Bejoy - School Of Engineering, CUSAT
 
 ### Project Description
-[2-3 lines about what your project does]
+EnnalumNthayirkum..? is an AI-powered overthinking machine that turns completely normal relationship messages into unnecessarily complicated emotional investigations.
+
+Paste something as innocent as “ok”, and our system will explain why it might mean anything from “I’m busy” to “our relationship is over.” Because apparently, “ok” was obviously never just “okay.” 😭
+
+*Built for people who could simply ask "what do you mean?" but chose to investigate instead.*
+
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Have you ever received a simple “hmm”, “ok”, or “k” and immediately started questioning your entire relationship?
+Neither have we.
+But we decided this completely imaginary problem deserved a completely unnecessary solution.
+
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+Introducing EnnalumNthayirkum..? — a completely useless Overthinking Report Generator.
 
+Simply enter a message and the system generates a dramatic analysis containing:
+
+🔍 Possible hidden meanings
+🚩 Suspicious interpretations
+🧠 Things you probably shouldn't overthink
+💀 Worst-case scenarios
+🕵️ "Evidence" from absolutely nothing
+📊 Overthinking intensity
+🚨 Relationship danger level
+🔥 Savage replies
+🤡 Completely unnecessary conclusions
+
+The goal isn't to solve your relationship problems.
+
+The goal is to create more.
 ## Technical Details
 ### Technologies/Components Used
 For Software:
